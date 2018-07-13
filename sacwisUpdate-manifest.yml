@@ -1,0 +1,15 @@
+--- 
+applications: 
+  - 
+    buildpack: java_buildpack
+    instances: 1
+    memory: 750M
+    name: sacwisUpdate
+    path: C:\My_Data\sts\workspace\sacwisUpdate\build\libs\sacwisUpdate-0.0.1-SNAPSHOT.jar
+    services: 
+      - cw-portal-config-server
+      - cw-portal-service-registry
+      - sacwis-update-mysql
+    timeout: 180
+    env:
+      APP_VERSION: blue
